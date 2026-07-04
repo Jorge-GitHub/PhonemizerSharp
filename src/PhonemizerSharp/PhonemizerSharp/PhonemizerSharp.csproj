@@ -10,6 +10,8 @@
     <None Remove="Application\Providers\EspeakNgNativeService\Libraries\Native\Win-x64\**\*" />
     <Content Include="Application\Providers\EspeakNgNativeService\Libraries\Native\Win-x64\**\*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
     </Content>
   </ItemGroup>
 
