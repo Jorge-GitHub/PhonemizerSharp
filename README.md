@@ -16,11 +16,12 @@ src/
 ## Requirements
 
 - .NET 10 SDK
-- eSpeak NG, depending on the runtime you choose
 
-For the process runtime, `espeak-ng` must be available on `PATH`, or you must set `EspeakNgProviderSettings.ExecutablePath`.
+The default runtime uses the bundled Windows x64 eSpeak NG native assets (`libespeak-ng.dll` and `espeak-ng-data`), so a separate eSpeak NG install is not required for the default Windows x64 path.
 
-For the native runtime, PhonemizerSharp can use the bundled Windows x64 native assets. On other platforms, install `libespeak-ng` and make sure it can be found by the operating system loader, or set `EspeakNgProviderSettings.NativeLibraryPath` and `DataPath`.
+If you explicitly choose the process runtime, PhonemizerSharp launches an `espeak-ng` executable. In that mode, `espeak-ng` must be available on `PATH`, or you must set `EspeakNgProviderSettings.ExecutablePath`.
+
+On non-Windows x64 platforms, install `libespeak-ng` and make sure it can be found by the operating system loader, or set `EspeakNgProviderSettings.NativeLibraryPath` and `DataPath`.
 
 ## Quick Start
 
@@ -43,7 +44,7 @@ Console.WriteLine(result.Phonemes);
 
 `PhonemizerService` uses `PhonemizerSettings`. By default, `Runtime.Auto` currently selects the native eSpeak NG runtime.
 
-Use the process runtime when you prefer to call an installed `espeak-ng` executable:
+Use the process runtime only when you prefer to call an external `espeak-ng` executable:
 
 ```csharp
 using PhonemizerSharp.Application;
@@ -126,7 +127,7 @@ dotnet build .\src\PhonemizerSharp\PhonemizerSharp.slnx
 dotnet test .\src\PhonemizerSharp\PhonemizerSharp.slnx
 ```
 
-Some tests exercise live eSpeak NG behavior. If eSpeak NG is not available on your machine, those tests may be inconclusive or fail depending on the runtime being tested.
+Some tests exercise live eSpeak NG behavior. The native live tests can use the bundled Windows x64 assets. The process live tests require an `espeak-ng` executable.
 
 To skip live eSpeak NG tests:
 
