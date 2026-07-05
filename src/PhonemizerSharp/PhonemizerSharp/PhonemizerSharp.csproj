@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>PhonemizerSharp</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Jorge Gonzalez</Authors>
+    <Description>A .NET library for converting text into phoneme sequences. Suitable for TTS engines, speech processing, and natural language applications.</Description>
+    <PackageTags>phonemizer;phonemes;ipa;espeak-ng;text-to-speech;speech-processing;natural-language-processing</PackageTags>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/Jorge-GitHub/PhonemizerSharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Jorge-GitHub/PhonemizerSharp</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Application\Providers\EspeakNgNativeService\Libraries\Native\Win-x64\**\*" />
+    <Content Include="Application\Providers\EspeakNgNativeService\Libraries\Native\Win-x64\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+    </Content>
+  </ItemGroup>
+
+</Project>

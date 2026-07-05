@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="PhonemizerSharp.Ut/PhonemizerSharp.Ut.csproj" />
+  <Project Path="PhonemizerSharp/PhonemizerSharp.csproj" />
+</Solution>
