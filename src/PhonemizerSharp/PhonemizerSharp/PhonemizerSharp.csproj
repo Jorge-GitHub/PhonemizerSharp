@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>PhonemizerSharp</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Authors>Jorge Gonzalez</Authors>
     <Description>A .NET library for converting text into phoneme sequences. Suitable for TTS engines, speech processing, and natural language applications.</Description>
     <PackageTags>phonemizer;phonemes;ipa;espeak-ng;text-to-speech;speech-processing;natural-language-processing</PackageTags>
