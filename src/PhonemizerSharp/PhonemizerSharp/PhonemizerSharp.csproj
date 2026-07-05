@@ -11,6 +11,7 @@
     <PackageTags>phonemizer;phonemes;ipa;espeak-ng;text-to-speech;speech-processing;natural-language-processing</PackageTags>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>PhonemizerSharp.NuGet.png</PackageIcon>
     <PackageProjectUrl>https://github.com/Jorge-GitHub/PhonemizerSharp</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Jorge-GitHub/PhonemizerSharp</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -18,6 +19,7 @@
 
   <ItemGroup>
     <None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\..\images\logos\PhonemizerSharp.NuGet.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
